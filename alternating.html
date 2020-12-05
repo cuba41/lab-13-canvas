@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="300" height="300">
+
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+			var userstring = prompt("How many pairs you want?");
+			var usernum = parseInt(userstring, 10);
+			var thismany = usernum * 2 - 1;
+			context.fillStyle = "#ff0000";
+
+			for (i = 0; i <= thismany; i++) {
+				if (i % 2 == 0) { //all even numbers modulo = 2
+					context.fillStyle = "#ff0000"
+					context.fillRect((i * 25),20, 20, 20);
+				} else {
+					context.fillStyle = "927BE8"
+					context.beginPath();
+					context.arc((i * 20 + 5), 30, 10, 0, 2 * Math.Pi, true);
+					context.fill();
+				}
+			}
+		//	for(i = 0; i <= 4; i = i + 1) {
+			//	context.fillRect((i * 25),20, 20, 20);
+				// context.fillRect(x, y, width, height);
+
+			}
+
+	</script>
+
+</body>
+</html>
