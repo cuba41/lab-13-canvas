@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="300" height="300">
+
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+			var userstring = prompt(" how many pairs do you want?");
+			var usernum = parseInt(userstring, 10);
+
+
+			for (var num =1; num <=usernum; num=num+1) {
+
+					context.fillStyle = "blue"
+
+					context.beginPath();
+					context.arc(20,(num * 25 + 10), 10, 0, 2 * Math.PI, true);
+					context.closePath();
+					context.fill();
+
+				}
+			}
+
+
+
+	</script>
+
+</body>
+</html>

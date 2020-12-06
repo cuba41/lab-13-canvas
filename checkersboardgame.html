@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body onload="draw()">
+<canvas id="sketch" width="300" height="300">
+</canvas>
+<script>
+function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+	for (i = 0; i <= 7; i++) {
+      if (i % 2 == 0) {
+        context.fillStyle = "black"
+        context.fillRect((i * 25), 20, 30, 30);
+        context.fillStyle = "white"
+        context.fillRect((i * 25), 50, 30, 30);
+        context.fillStyle = "black"
+        context.fillRect((i * 25), 80, 30, 30);
+        context.fillStyle = "white"
+        context.fillRect((i * 25), 110, 30, 30);
+        context.fillStyle = "black"
+        context.fillRect((i * 25), 140, 30, 30);
+        context.fillStyle = "white"
+        context.fillRect((i * 25), 170, 30, 30);
+        context.fillStyle = "black"
+        context.fillRect((i * 25), 200, 30, 30);
+        context.fillStyle = "white"
+        context.fillRect((i * 25), 230, 30, 30);
+
+        context.fillStyle = "purple"
+        context.beginPath();
+        context.arc((i * 25 + 10), 35, 10, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+        context.fillStyle = "purple"
+        context.beginPath();
+        context.arc((i * 25 + 10), 95, 10, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+        context.fillStyle = "pink"
+        context.beginPath();
+        context.arc((i * 25 + 10), 185, 10, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+
+        context.fillStyle = "pink"
+        context.beginPath();
+        context.arc((i * 25 + 10), 245, 10, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+
+}else  {
+        context.fillStyle = "white"
+        context.fillRect((i * 25), 20, 30, 30);
+        context.fillStyle = "black"
+        context.fillRect((i * 25), 50, 30, 30);
+
+        context.fillStyle = "purple"
+        context.beginPath();
+        context.arc((i * 25 + 10), 65, 10, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+
+        context.fillStyle = "white"
+        context.fillRect((i * 25), 80, 30, 30);
+        context.fillStyle = "black"
+        context.fillRect((i * 25), 110, 30, 30);
+        context.fillStyle = "white"
+        context.fillRect((i * 25), 140, 30, 30);
+        context.fillStyle = "black"
+        context.fillRect((i * 25), 170, 30, 30);
+        context.fillStyle = "white"
+        context.fillRect((i * 25), 200, 30, 30);
+        context.fillStyle = "black"
+        context.fillRect((i * 25), 230, 30, 30);
+
+        context.fillStyle = "pink"
+        context.beginPath();
+        context.arc((i * 25 + 10), 215, 10, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+      }
+}
+}
+    </script>
+  </body>
+</html>

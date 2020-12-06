@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body onload="draw()">
+<canvas id="sketch" width="300" height="300">
+</canvas>
+<script>
+function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+
+			for (i = 0; i <=5; i++) {
+			 {
+					context.fillStyle = "#ff0000"
+
+          for (i = 0; i <=5; i++) {
+
+              context.fillStyle = "red"
+              context.beginPath();
+              context.arc((i * 28+5),(i*24+5), (i*10+5),0, 2 * Math.PI, true);
+              context.closePath();
+              context.fill();
+
+					context.fillStyle = "blue"
+
+					context.beginPath();
+					context.arc((i * 30+5),(i*25+5) ,(i*10+5) , 0, 2 * Math.PI, true);
+					context.closePath();
+					context.fill();
+
+				}
+			}
+    	}
+    }
+    </script>
+  </body>
+</html>
